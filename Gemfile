@@ -20,6 +20,7 @@ gem 'bootstrap-will_paginate', '1.0.0'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'sass-rails', '>= 6'
 
+gem 'rails-controller-testing'
 
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
