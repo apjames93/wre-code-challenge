@@ -1,20 +1,11 @@
-@import 'bootstrap/dist/css/bootstrap';
-
 $navbar-default-bg: black;
 
 .navbar {
-  background-color: black !important;
+  background-color: black;
 }
 
-.listing {
-  list-style: none;
-  padding-left: 0;
-}
-
-.article-meta-details {
-  border-top: 1px solid #eaeaea;
-  margin-top: 15px;
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 #logo {
   float: left;
@@ -35,13 +26,13 @@ $navbar-default-bg: black;
 }
 
 .jumbotron {
-  background-image: asset-url('cover_page.png');
+  // background-image: asset-url('cover_page.png');
   background-size: cover;
   height: 550px;
 }
 
 .jumbotron h1 {
-  color: rgb(14, 13, 13);
+  color: #fff;
   text-align: center;
   margin-bottom: 30px;
   letter-spacing: -1px;
@@ -51,6 +42,47 @@ $navbar-default-bg: black;
 .btn-xlarge {
   font-size: 1.7em;
   background-color: black;
+}
+
+.article-meta-details {
+  border-top: 1px solid #eaeaea;
+  margin-top: 15px; 
+}
+
+.article-actions {
+  border-top: 1px solid #eaeaea;
+  padding-top: 5px;
+}
+
+.description {
+  margin-top: 0;
+}
+
+.article-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.article-body {
+  border-top: 1px solid #eaeaea;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.listing {
+  list-style: none;
+  padding-left: 0;
+}
+
+.badge {
+  background-color: #CEF6F5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+.input_checkbox input {
+  width: auto !important;
 }
 
 footer {
@@ -76,25 +108,4 @@ footer ul {
 footer ul li {
   float: left;
   margin-left: 15px;
-}
-
-
-.article-actions {
-  border-top: 1px solid #eaeaea;
-  padding-top: 5px;
-}
-
-.description {
-  margin-top: 0;
-}
-
-.article-title {
-  font-weight: bold;
-  font-size: 1.5em;
-}
-
-.article-body {
-  border-top: 1px solid #eaeaea;
-  padding-top: 15px;
-  padding-bottom: 15px;
 }
