@@ -17,7 +17,7 @@ module Mutations
         article = Article.new(artical_arg)
       end
 
-      if article.id && article.user_id == context[:current_user][:id] && context[:current_user][:admin] == false
+      if article.id && article.user_id != context[:current_user][:id] && context[:current_user][:admin] == false
         raise GraphQL::ExecutionError.new('You can only edit or delete your own articles')
       end
 
