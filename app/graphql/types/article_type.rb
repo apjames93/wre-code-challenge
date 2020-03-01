@@ -2,7 +2,7 @@
 
 module Types
   class ArticleType < Types::BaseObject
-    description 'Fields accessible for ArticleType'
+    description 'Fields accessible for an ArticleType'
     field :id, ID, null: true
     field :user_id, ID, null: true
     field :title, String, null: true
