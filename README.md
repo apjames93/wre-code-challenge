@@ -24,10 +24,10 @@ _Note:_ This is a front-end & design focused challenge. In other words, we are g
 
 ## Acessing the code challenge API
 - Explore the API docs [here](https://wre-code-challenge.herokuapp.com/graphiql)
-- The publically facing GraphQL API endpoint for you to consume from is: `https://wre-code-challenge.herokuapp.com/graphql`
+- Publically facing GraphQL API endpoint for you to consume: `https://wre-code-challenge.herokuapp.com/graphql`
 
 ## Technologies to use
-Choose whatever front-end technology you're most familiar with. Here's some of the technologies our team is familiar with:
+We use React, but choose whichever front-end framework/technology below that you're most familiar with:
 * React
 * Vue
 * Angular
