@@ -1,5 +1,5 @@
 # Woodriver Energy Code Challenge
-Hello and welcome! The task at hand is to implement a small React web application that consumes "articles" and displays them. You'll be fetching sorted JSON data directly from our API.
+Hello and welcome! The task at hand is to implement a small React web application that consumes "articles", displays them, and can update them. You'll be fetching sorted JSON data directly from our API.
 
 ## Requirements
 1. As a user I should be able to open the application and view articles
