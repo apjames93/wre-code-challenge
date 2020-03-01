@@ -6,13 +6,13 @@ default: &default
 
 development:
   <<: *default
-  database: blog_dev
+  url: postgresql://localhost:5432/wre_code_challenge_development
 
 test:
   <<: *default
-  database: blog_test
+  url: postgresql://localhost:5432/wre_code_challenge_test
 
 production:
   <<: *default
-  url: <%= ENV.fetch("DATABASE_URL") %>
+  url: <%= ENV['DATABASE_URL'] %>
   database: blog
