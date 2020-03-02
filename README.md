@@ -15,7 +15,7 @@ _Note:_ This is a front-end & design focused challenge. In other words, we are g
 - Use redux
 - Deploy your challenge somewhere live
 
-## Things to keep in mind 🚨
+## Things to keep in mind❗
 * Features are less important than code quality. Put more focus on code quality and less on speed and number of features implemented.
 * Your code will be evaluated based on: code structure, programming best practices, legibility (and not number of features implemented or speed).
 * The git commit history (and git commit messages) will be also evaluated.
@@ -23,7 +23,14 @@ _Note:_ This is a front-end & design focused challenge. In other words, we are g
 * Please do not spend more than 4-5 hours on this max! Again you are not being evaluated on speed/number of features.
 
 ## Acessing the code challenge API
-- Explore the API docs [here](https://wre-code-challenge.herokuapp.com/graphiql)
+- If you aren't familiar with GraphQL, here is a link to their org: https://graphql.org where you can find docs, the spec, links to example implementations, etc. As you will see when exploring the API, it has a powerful type system and great schema introspection.
+- To explore the API docs:
+    1. Go to our live [GraphQL IDE](https://wre-code-challenge.herokuapp.com/graphiql)
+    2. Click on the `<Docs` button in the top right hand corner
+    3. From here you can explore the `Query` and the  `Mutation`.
+        - These are the root operations in our schema.
+        - Think about `Query` as a collection of `Read` queries
+        - Think about `Mutation` as a collection of `Write` queries
 - Publically facing GraphQL API endpoint for you to consume: `https://wre-code-challenge.herokuapp.com/graphql`
 
 ## Technologies to use
