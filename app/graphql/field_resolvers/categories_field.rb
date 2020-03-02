@@ -4,7 +4,7 @@ module FieldResolvers
   module CategoriesField
     def self.included(child_class)
       child_class.field :categories, [Types::CategoryType], null: true do
-        description 'gets category by name'
+        description 'Get a category by name'
         argument :name, GraphQL::Types::String, required: true
       end
     end

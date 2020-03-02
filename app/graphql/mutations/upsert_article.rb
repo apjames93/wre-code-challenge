@@ -7,22 +7,15 @@ module Mutations
     type Types::ArticleType
 
     def resolve(args)
-      artical_arg = args[:article].to_h
-      user_id = context[:current_user][:id]
+      args_hash = args[:article].to_h
 
-      if artical_arg[:id]
-        article = Article.find(artical_arg[:id])
-        user_id = article.user_id
+      if args_hash[:id]
+        article = Article.find(args_hash[:id])
       else 
-        article = Article.new(artical_arg)
+        article = Article.new(args_hash)
       end
 
-      if article.id && article.user_id != context[:current_user][:id] && context[:current_user][:admin] == false
-        raise GraphQL::ExecutionError.new('You can only edit or delete your own articles')
-      end
-
-      article.update(artical_arg.merge(user_id: user_id))
-
+      article.update(args_hash.merge(user_id: user_id))
       args[:category_ids].each { |id| ArticleCategory.create(article: article, category_id: id) } if args[:category_ids].count > 0
 
       article
