@@ -3,12 +3,13 @@ Hello and welcome! The task at hand is to implement a small React web applicatio
 
 ## Requirements
 1. As a user I should be able to open the application and view articles
-2. As a user I should be able to see all of associated data (fields) on a displayed `Article` except for `id` and `user_id`
+2. As a user I should be able to see all of the associated data (fields) on an `Article` except for `id` and `user_id`
 3. As a user I should have the ability to `update` articles
 
 _Note:_ This is a front-end & design focused challenge. In other words, we are giving you __no__ visual requirements! Excited to see what  you come up with.
 
 ## Bonus
+- Use [create-react-app](https://github.com/facebook/create-react-app)
 - Use SASS or LESS
 - Add some CSS animations and/or transitions
 - Utilize other GraphQL endpoints to expand the requested feature set
