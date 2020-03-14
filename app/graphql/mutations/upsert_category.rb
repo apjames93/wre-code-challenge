@@ -2,21 +2,23 @@
 
 module Mutations
   class UpsertCategory < Mutations::BaseMutation
+    description 'Creates or updates an category. Pass an ID with an category to update, omit ID to create.'
     argument :category, Inputs::CategoryInput, required: true
     type Types::CategoryType
 
     def resolve(args)
-      category_arg = args[:category].to_h
-      if context[:current_user][:admin].blank?
-        raise GraphQL::ExecutionError.new('Only admins can perform that action')
+      args_hash = args[:category].to_h
+
+      if args_hash[:id]
+        category = Category.find(args_hash[:id])
+        category.update(args_hash)
+      else 
+        category = Category.new(args_hash)
+        category.save
       end
 
-      if category_arg[:id]
-        category = Category.find(category_arg[:id])
-      else 
-        category = Category.new(category_arg)
-      end
-      category.update(category_arg)
+      raise GraphQL::ExecutionError.new(category.errors.full_messages) unless category.errors.empty?
+
       category
     end
   end
