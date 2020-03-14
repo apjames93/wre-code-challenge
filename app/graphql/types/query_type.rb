@@ -10,7 +10,7 @@ module Types
     description 'The query root of of wre_code_challenge schema'
 
     field :ping, String, null: true do
-      description 'for testing the graphql endpoint'
+      description 'Health check endpoint for wre-code-challenge'
     end
 
     def ping
